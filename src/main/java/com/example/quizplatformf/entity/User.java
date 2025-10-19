@@ -26,7 +26,6 @@ public class User {
     private List<Quiz> quizzes = new ArrayList<>();
 
     public User() {
-
     }
 
     public User(String firstName, String lastName, String email, String password, Role role ) {
