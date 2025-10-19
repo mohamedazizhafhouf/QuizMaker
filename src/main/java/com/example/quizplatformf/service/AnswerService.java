@@ -8,8 +8,7 @@ import java.util.List;
 @Service
 public interface AnswerService {
     List<Answer> getAnswerList();
-    Answer getAnswerById(int id);
-    void deleteAnswer(int id);
+    void deleteAnswer(Answer answer);
     Answer createAnswer(Answer answer);
     Answer updateAnswer(Answer answer);
 }
