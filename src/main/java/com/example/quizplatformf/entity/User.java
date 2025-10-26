@@ -40,5 +40,13 @@ public class User {
         return user_id;
     }
 
+    public String getPassword(){
+        return this.password;
+    }
+
+    public String getEmail(){
+        return this.email;
+    }
+
 
 }

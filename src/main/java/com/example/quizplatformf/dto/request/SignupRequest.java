@@ -1,4 +1,4 @@
-package com.example.quizplatformf.dto;
+package com.example.quizplatformf.dto.request;
 
 import com.example.quizplatformf.entity.enums.Role;
 import lombok.Data;

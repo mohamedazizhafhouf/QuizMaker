@@ -9,4 +9,5 @@ public interface UserService {
     List<User> getUserList();
     void deleteUser(User user);
     User updateUser(User user);
+    User getUserByEmail(String email);
 }
