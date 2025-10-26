@@ -5,6 +5,7 @@ import com.example.quizplatformf.entity.User;
 import com.example.quizplatformf.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import com.example.quizplatformf.dto.request.SignupRequest;
@@ -12,7 +13,7 @@ import com.example.quizplatformf.dto.response.loginResponse;
 
 
 
-@RestController
+@Controller
 @RequestMapping("/api/auth")
 public class AuthController {
 
@@ -69,21 +70,17 @@ public class AuthController {
 
         if (user == null) {
             model.addAttribute("error", "User not found!");
-            return "signin"; // back to login page
+            return "signin";
         }
 
         if (!user.getPassword().equals(loginRequest.getPassword())) {
             model.addAttribute("error", "Invalid password!");
-            return "signin"; // back to login page
+            return "signin";
         }
 
         model.addAttribute("message", "Login successful!");
         model.addAttribute("user", user);
         return "dashboard";
-
     }
-
-
-
 
 }
