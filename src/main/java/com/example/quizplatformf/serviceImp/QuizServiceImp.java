@@ -19,7 +19,7 @@ public class QuizServiceImp implements QuizService {
     }
 
     @Override
-    public Quiz createQuiz(Quiz quiz) {
+    public Quiz createQuiz(Quiz quiz, Long userId) {
         return quizRepository.save(quiz);
     }
 
@@ -29,5 +29,13 @@ public class QuizServiceImp implements QuizService {
 
     public Quiz updateQuiz(Quiz quiz){
         return quizRepository.save(quiz);
+    }
+
+    public Quiz getQuizById(Long id){
+        return quizRepository.findById(id).get();
+    }
+
+    public void deleteQuizById(Long id){
+        quizRepository.deleteById(id);
     }
 }
